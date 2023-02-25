@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>Update Patients</title>
+    {{! <link rel="stylesheet" href="css/index.css" /> }}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+  </head>
+  <body>
+
+    <center>
+      <div class="p-3 w-25 mb-2 bg-light">
+        <div>
+
+          <center><h1>Update Patients</h1></center>
+          <br /><br />
+
+          <p>{{err}}</p>
+          <form action="/updatepatient/{{patient.email}}" method="POST">
+
+            Email
+            <br />
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              value="{{patient.email}}"
+            />
+            <br />
+            Name
+
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              value="{{patient.name}}"
+            />
+            <br />
+
+            gender
+
+            <input
+              type="text"
+              class="form-control"
+              name="gender"
+              value="{{patient.gender}}"
+            />
+            <br />
+            Age
+
+            <input
+              type="number"
+              class="form-control"
+              name="age"
+              value="{{patient.age}}"
+            />
+            <br />
+            Phone
+
+            <input
+              type="number"
+              class="form-control"
+              name="phone"
+              value="{{patient.phone}}"
+            />
+            <br />
+
+            Ailment
+
+            <input
+              type="text"
+              class="form-control"
+              name="ailment"
+              value="{{patient.ailment}}"
+            />
+            <br />
+
+            Prescription
+
+            <input
+              type="text"
+              class="form-control"
+              name="prescription"
+              value="{{patient.prescription}}"
+            />
+            <br />
+
+            <center>
+              <button type="submit" class="btn btn-dark btn-lg">Update</button>
+
+            </center>
+          </form>
+        </div>
+      </div>
+    </center>
+
+  </body>
+</html>
